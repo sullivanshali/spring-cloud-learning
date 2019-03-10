@@ -1,0 +1,27 @@
+server:
+  port: 8070
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+    database-platform: org.hibernate.dialect.MySQLDialect
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1/test?characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: sytwrj
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: microservice-provider
+logging:
+  level:
+    root: INFO
+    org.hibernate: INFO
+    org.hibername.type.descriptor.sql.BasicBinder: TRACE
+    org.hibername.type.descriptor.sql.BasicExtractor: TRACE
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:8761/eureka,http://peer2:8762/eureka
