@@ -5,12 +5,16 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: none
-    database-platform: org.hibernate.dialect.MySQLDialect
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1/test?characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
-    username: root
-    password: sytwrj
+    platform: h2
+    schema: classpath:schema.sql
+    data: classpath:data.sql
+#    database-platform: org.hibernate.dialect.MySQLDialect
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://127.0.0.1/test?characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+#    username: root
+#    password: sytwrj
   main:
     allow-bean-definition-overriding: true
   application:
@@ -24,4 +28,4 @@ logging:
 eureka:
   client:
     service-url:
-      defaultZone: http://peer1:8761/eureka,http://peer2:8762/eureka
+      defaultZone: http://localhost:8761/eureka

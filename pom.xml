@@ -12,6 +12,10 @@
 		<module>com.shaliy.microservice-provider</module>
 		<module>com.shaliy.microservice-consumerr</module>
 		<module>com.shaliy.microservice-eureka</module>
+		<module>com.shaliy.microservice-eureka-high</module>
+		<module>microservice-consumer-with-hystrix</module>
+		<module>microservice-hystrix-dashboard</module>
+		<module>microservice-consume-with-feign</module>
 	</modules>
 
 	<properties>
